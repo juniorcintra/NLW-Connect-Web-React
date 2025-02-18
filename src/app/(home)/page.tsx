@@ -1,14 +1,13 @@
-import Button from "@/components/Button"
-import { InputField, InputIcon, InputRoot } from "@/components/Input"
-import { ArrowRight, Mail, Radio, User } from "lucide-react"
-import Image from "next/image"
-import Logo from "../assets/logo.svg"
+import { Radio } from "lucide-react"
+
+import LogoComponent from "@/components/Logo"
+import SubscriptionForm from "./components/subscription-form"
 
 export default function Home() {
   return (
     <div className="min-h-dvh flex flex-col justify-center gap-16">
       <div className="flex flex-col gap-8 items-center w-full max-w-[550px] md:items-start">
-        <Image src={Logo} alt="logo" width={108.5} height={30} />
+        <LogoComponent />
 
         <h1 className="text-4xl text-center leading-none font-heading font-medium flex flex-col md:text-7xl md:text-left">
           <span>CodeCraft</span> Summit 2025
@@ -36,33 +35,7 @@ export default function Home() {
             Dias 15 a 17 de março | Das 18h às 21h | Online & Gratuito{" "}
           </p>
         </div>
-        <form
-          action=""
-          className="bg-gray-700 border border-gray-600 rounded-2xl p-8 space-y-6 w-full md:max-w-[440px]"
-        >
-          <h2 className="font-heading font-semibold text-gray-200 text-xl">
-            Inscrição
-          </h2>
-
-          <div className="space-y-3">
-            <InputRoot>
-              <InputIcon>
-                <User />
-              </InputIcon>
-              <InputField type="text" placeholder="Nome completo" />
-            </InputRoot>
-            <InputRoot>
-              <InputIcon>
-                <Mail />
-              </InputIcon>
-              <InputField type="email" placeholder="E-mail" />
-            </InputRoot>
-          </div>
-          <Button type="submit">
-            Confirmar
-            <ArrowRight />
-          </Button>
-        </form>
+        <SubscriptionForm />
       </div>
     </div>
   )
