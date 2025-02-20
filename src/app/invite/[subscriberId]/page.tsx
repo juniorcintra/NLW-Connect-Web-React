@@ -3,8 +3,14 @@ import InviteLinkInput from "./components/InviteLinkInput"
 import Ranking from "./components/Ranking"
 import Stats from "./components/Stats"
 
-export default function InvitePage() {
-  const inviteLink = "https://devstage.com.br/invite/1231231231231"
+interface InvitePageProps {
+  params: Promise<{ subscriberId: string }>
+}
+
+export default async function InvitePage(props: InvitePageProps) {
+  const { subscriberId } = await props.params
+
+  const inviteLink = `http://localhost:3333/invites/${subscriberId}`
 
   return (
     <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">

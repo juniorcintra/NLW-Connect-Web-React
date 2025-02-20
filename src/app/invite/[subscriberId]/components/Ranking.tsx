@@ -1,7 +1,7 @@
 import Image from "next/image"
-import MedalGold from "../../../assets/medal1.svg"
-import MedalSilver from "../../../assets/medal2.svg"
-import MedalCooper from "../../../assets/medal3.svg"
+import MedalGold from "../../../../assets/medal1.svg"
+import MedalSilver from "../../../../assets/medal2.svg"
+import MedalCooper from "../../../../assets/medal3.svg"
 
 export default function Ranking() {
   return (
@@ -35,7 +35,7 @@ export default function Ranking() {
           <span className="font-heading text-2xl font-semibold text-gray-200 leading-none">
             1030
           </span>
-          <Image className="absolute right-8 top-0" src={MedalSilver} alt="" />
+          <Image className="absolute right-8 top-0" src={MedalCooper} alt="" />
         </div>
       </div>
     </div>
